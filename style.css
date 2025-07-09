@@ -1,107 +1,160 @@
 * {
-    box-sizing: border-box;
-    margin: 0;  
-    padding: 0;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
+
 body {
-    background-color: #ffffff;
-    color: #fff;
-    background: url("img2.webp") no-repeat center center fixed;
-    background-size: cover;
+  background: url("img2.webp") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
 }
 
-.left-section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px;
-    color: white;
-}
-.left-section .logo {
-    width: 100px;
-    margin-bottom: 20px;
-}
-.left-section h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-.left-section p {
-    font-size: 1.2rem;
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  backdrop-filter: blur(3px);
 }
 
-.form-section {
-    flex: 1;
-    background-color: rgba(23, 37, 42, 0.8); /* adds slight transparency */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
+.left {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+.branding {
+  text-align: left;
+  color: #fff;
+}
+.branding img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+.branding h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+.branding h4 {
+  background-color: yellow;
+  display: inline-block;
+  padding: 3px 10px;
+  margin: 10px 0;
+  color: #000;
+}
+.branding h1 {
+  font-size: 38px;
+  color: #ffc107;
+  margin: 20px 0 10px;
+}
+.branding p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.promo-btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #ffc107;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.form-border {
-    width: 100%;
-    max-width: 500px;
-    background-color: #1f3a47;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.form-border h2 {
-    text-align: center;
-    margin-bottom: 20px;
+.form-box {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 30px 30px;
+  border-radius: 12px;
+  max-width: 450px;
+  width: 100%;
 }
-form input,
-form select,
-form button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: none;
-}
-form input,
-form select {
-    background-color: #0d1b2a;
-    color: #fff;
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-form input[type="radio"],
-form input[type="checkbox"] {
-    width: auto;
-    margin-right: 8px;
+.input-group {
+  position: relative;
+  margin-bottom: 15px;
 }
-.radio-group,
-.checkbox-group {
-    margin: 10px 0;
+.input-group i {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  color: gray;
 }
-form label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    color: #eee;
+.input-group input {
+  width: 100%;
+  padding: 10px 10px 10px 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+  color: white;
 }
-form button {
-    background-color: #007bff;
-    color: #fff;
-    margin-top: 15px;
-    transition: background-color 0.3s ease;
-}
-form button:hover {
-    background-color: #0056b3;
+.input-group input::placeholder {
+  color: #aaa;
 }
 
+.input-pair {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.input-pair input,
+.input-pair select {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+  border: none;
+  color: white;
+}
+.input-pair select option {
+  background-color: white;
+  color: black;
+}
+
+.terms {
+  font-size: 12px;
+  margin: 10px 0;
+  display: block;
+  color: #ddd;
+}
+
+.apply-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #ffc107;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.apply-btn i {
+  margin-left: 8px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-    .left-section, .form-section {
-        flex: unset;
-        width: 100%;
-    }
-    .left-section {
-        padding: 20px;
-    }
+  .container {
+    flex-direction: column;
+  }
+  .left, .right {
+    flex: none;
+    width: 100%;
+  }
+  .left {
+    padding: 20px;
+  }
 }

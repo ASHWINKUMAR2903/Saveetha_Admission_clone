@@ -1,61 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saveetha Admission Enquiry</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saveetha Admissions Clone</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <main class="container">
-        <section class="left-section">
-            <div class="branding">
-                <img src="img1.jpeg" alt="Saveetha Logo" class="logo">
-                <h1>Saveetha Engineering College</h1>
-                <p>Affiliated to Anna University</p>
-            </div>
-        </section>
+  <div class="container">
+    <div class="left">
+      <div class="branding">
+        <img src="img1.jpeg" alt="Saveetha Logo" />
+        <h2>SAVEETHA ENGINEERING COLLEGE</h2>
+        <h4>Affiliated to Anna University</h4>
+        <h1>INDUSTRY 5.0</h1>
+        <p>Ready Curriculum Imparting <br/> 21st Century Skills</p>
+        <button class="promo-btn">Apply Now <i class="fa fa-angle-down"></i></button>
+      </div>
+    </div>
 
-        <section class="form-section">
-            <div class="form-border">
-                <h2>Admission Enquiry Form</h2>
-                <form>
-                    <input type="text" placeholder="Enter Name" required>
-                    <input type="email" placeholder="Enter Email" required>
-                    <input type="tel" placeholder="Enter Phone Number" required>
+    <div class="right">
+      <form class="form-box">
+        <h2>Admissions Open 2025</h2>
 
-                    <div class="radio-group">
-                        <label>Gender:</label>
-                        <label><input type="radio" name="gender" required> Male</label>
-                        <label><input type="radio" name="gender" required> Female</label>
-                    </div>
+        <div class="input-group">
+          <i class="fa fa-user"></i>
+          <input type="text" placeholder="Enter Name *" required />
+        </div>
 
-                    <label>Date of Birth:</label>
-                    <input type="date" required title="Enter your date of birth" placeholder="Select Date of Birth">
+        <div class="input-group">
+          <i class="fa fa-envelope"></i>
+          <input type="email" placeholder="Enter Email Address *" required />
+        </div>
 
-                    <label for="department">Department Interested:</label>
-                    <select id="department" required>
-                        <option value="">Select Department</option>
-                        <option value="CSE">CSE</option>
-                        <option value="ECE">ECE</option>
-                        <option value="MECH">MECH</option>
-                        <option value="IT">IT</option>
-                    </select>
+        <div class="input-group">
+          <i class="fa fa-phone"></i>
+          <input type="tel" placeholder="Enter Mobile Number *" required />
+        </div>
 
-                    <input type="text" placeholder="Enter State" required>
-                    <input type="text" placeholder="Enter City" required>
+        <div class="input-group">
+          <i class="fa fa-lock"></i>
+          <input type="password" placeholder="Any Password of Your Choice *" required />
+        </div>
 
-                    <div class="checkbox-group">
-                        <label>Preferred Mode of Contact:</label>
-                        <label><input type="checkbox" name="contact"> Phone</label>
-                        <label><input type="checkbox" name="contact"> Email</label>
-                    </div>
+        <div class="input-pair">
+          <input type="text" placeholder="State *" required />
+          <input type="text" placeholder="City *" required />
+        </div>
 
-                    <button type="submit">APPLY NOW</button>
-                    <button type="reset">Clear Form</button>
-                </form>
-            </div>
-        </section>
-    </main>
+        <div class="input-pair">
+          <select required>
+            <option value="">Course *</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="MECH">MECH</option>
+            <option value="IT">IT</option>
+          </select>
+          <select required>
+            <option value="">Specialization *</option>
+            <option value="AI">AI</option>
+            <option value="DS">Data Science</option>
+            <option value="Robotics">Robotics</option>
+          </select>
+        </div>
+        <label class="terms">
+          <input type="checkbox" required />
+          I agree for the above details and concern
+        </label>
+        <button class="apply-btn" type="submit">APPLY NOW <i class="fa fa-arrow-right"></i></button>
+      </form>
+    </div>
+  </div>
 </body>
 </html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saveetha Admission Enquiry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="left-section">
+            <div class="branding">
+                <img src="img1.jpeg" alt="Saveetha Logo" class="logo">
+                <h1>Saveetha Engineering College</h1>
+                <p>Affiliated to Anna University</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <div class="form-border">
+                <h2>Admission Enquiry Form</h2>
+                <form>
+                    <input type="text" placeholder="Enter Name" required>
+                    <input type="email" placeholder="Enter Email" required>
+                    <input type="tel" placeholder="Enter Phone Number" required>
+
+                    <div class="radio-group">
+                        <label>Gender:</label>
+                        <label><input type="radio" name="gender" required> Male</label>
+                        <label><input type="radio" name="gender" required> Female</label>
+                    </div>
+
+                    <label>Date of Birth:</label>
+                    <input type="date" required title="Enter your date of birth" placeholder="Select Date of Birth">
+
+                    <label for="department">Department Interested:</label>
+                    <select id="department" required>
+                        <option value="">Select Department</option>
+                        <option value="CSE">CSE</option>
+                        <option value="ECE">ECE</option>
+                        <option value="MECH">MECH</option>
+                        <option value="IT">IT</option>
+                    </select>
+
+                    <input type="text" placeholder="Enter State" required>
+                    <input type="text" placeholder="Enter City" required>
+
+                    <div class="checkbox-group">
+                        <label>Preferred Mode of Contact:</label>
+                        <label><input type="checkbox" name="contact"> Phone</label>
+                        <label><input type="checkbox" name="contact"> Email</label>
+                    </div>
+
+                    <button type="submit">APPLY NOW</button>
+                    <button type="reset">Clear Form</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

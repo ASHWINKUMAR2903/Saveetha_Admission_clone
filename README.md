@@ -42,177 +42,245 @@ Maintain readability and layout integrity on both desktop and mobile.
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saveetha Admission Enquiry</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saveetha Admissions Clone</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <main class="container">
-        <section class="left-section">
-            <div class="branding">
-                <img src="img1.jpeg" alt="Saveetha Logo" class="logo">
-                <h1>Saveetha Engineering College</h1>
-                <p>Affiliated to Anna University</p>
-            </div>
-        </section>
+  <div class="container">
+    <div class="left">
+      <div class="branding">
+        <img src="img1.jpeg" alt="Saveetha Logo" />
+        <h2>SAVEETHA ENGINEERING COLLEGE</h2>
+        <h4>Affiliated to Anna University</h4>
+        <h1>INDUSTRY 5.0</h1>
+        <p>Ready Curriculum Imparting <br/> 21st Century Skills</p>
+        <button class="promo-btn">Apply Now <i class="fa fa-angle-down"></i></button>
+      </div>
+    </div>
 
-        <section class="form-section">
-            <div class="form-border">
-                <h2>Admission Enquiry Form</h2>
-                <form>
-                    <input type="text" placeholder="Enter Name" required>
-                    <input type="email" placeholder="Enter Email" required>
-                    <input type="tel" placeholder="Enter Phone Number" required>
+    <div class="right">
+      <form class="form-box">
+        <h2>Admissions Open 2025</h2>
 
-                    <div class="radio-group">
-                        <label>Gender:</label>
-                        <label><input type="radio" name="gender" required> Male</label>
-                        <label><input type="radio" name="gender" required> Female</label>
-                    </div>
+        <div class="input-group">
+          <i class="fa fa-user"></i>
+          <input type="text" placeholder="Enter Name *" required />
+        </div>
 
-                    <label>Date of Birth:</label>
-                    <input type="date" required title="Enter your date of birth" placeholder="Select Date of Birth">
+        <div class="input-group">
+          <i class="fa fa-envelope"></i>
+          <input type="email" placeholder="Enter Email Address *" required />
+        </div>
 
-                    <label for="department">Department Interested:</label>
-                    <select id="department" required>
-                        <option value="">Select Department</option>
-                        <option value="CSE">CSE</option>
-                        <option value="ECE">ECE</option>
-                        <option value="MECH">MECH</option>
-                        <option value="IT">IT</option>
-                    </select>
+        <div class="input-group">
+          <i class="fa fa-phone"></i>
+          <input type="tel" placeholder="Enter Mobile Number *" required />
+        </div>
 
-                    <input type="text" placeholder="Enter State" required>
-                    <input type="text" placeholder="Enter City" required>
+        <div class="input-group">
+          <i class="fa fa-lock"></i>
+          <input type="password" placeholder="Any Password of Your Choice *" required />
+        </div>
 
-                    <div class="checkbox-group">
-                        <label>Preferred Mode of Contact:</label>
-                        <label><input type="checkbox" name="contact"> Phone</label>
-                        <label><input type="checkbox" name="contact"> Email</label>
-                    </div>
+        <div class="input-pair">
+          <input type="text" placeholder="State *" required />
+          <input type="text" placeholder="City *" required />
+        </div>
 
-                    <button type="submit">APPLY NOW</button>
-                    <button type="reset">Clear Form</button>
-                </form>
-            </div>
-        </section>
-    </main>
+        <div class="input-pair">
+          <select required>
+            <option value="">Course *</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="MECH">MECH</option>
+            <option value="IT">IT</option>
+          </select>
+          <select required>
+            <option value="">Specialization *</option>
+            <option value="AI">AI</option>
+            <option value="DS">Data Science</option>
+            <option value="Robotics">Robotics</option>
+          </select>
+        </div>
+        <label class="terms">
+          <input type="checkbox" required />
+          I agree for the above details and concern
+        </label>
+        <button class="apply-btn" type="submit">APPLY NOW <i class="fa fa-arrow-right"></i></button>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
+
 ```
 ## CSS Code:
 ```
 * {
-    box-sizing: border-box;
-    margin: 0;  
-    padding: 0;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
+
 body {
-    background-color: #ffffff;
-    color: #fff;
-    background: url("img2.webp") no-repeat center center fixed;
-    background-size: cover;
+  background: url("img2.webp") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
 }
 
-.left-section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px;
-    color: white;
-}
-.left-section .logo {
-    width: 100px;
-    margin-bottom: 20px;
-}
-.left-section h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-.left-section p {
-    font-size: 1.2rem;
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  backdrop-filter: blur(3px);
 }
 
-.form-section {
-    flex: 1;
-    background-color: rgba(23, 37, 42, 0.8); /* adds slight transparency */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
+.left {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+.branding {
+  text-align: left;
+  color: #fff;
+}
+.branding img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+.branding h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+.branding h4 {
+  background-color: yellow;
+  display: inline-block;
+  padding: 3px 10px;
+  margin: 10px 0;
+  color: #000;
+}
+.branding h1 {
+  font-size: 38px;
+  color: #ffc107;
+  margin: 20px 0 10px;
+}
+.branding p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.promo-btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #ffc107;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.form-border {
-    width: 100%;
-    max-width: 500px;
-    background-color: #1f3a47;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.form-border h2 {
-    text-align: center;
-    margin-bottom: 20px;
+.form-box {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 30px 30px;
+  border-radius: 12px;
+  max-width: 450px;
+  width: 100%;
 }
-form input,
-form select,
-form button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: none;
-}
-form input,
-form select {
-    background-color: #0d1b2a;
-    color: #fff;
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-form input[type="radio"],
-form input[type="checkbox"] {
-    width: auto;
-    margin-right: 8px;
+.input-group {
+  position: relative;
+  margin-bottom: 15px;
 }
-.radio-group,
-.checkbox-group {
-    margin: 10px 0;
+.input-group i {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  color: gray;
 }
-form label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    color: #eee;
+.input-group input {
+  width: 100%;
+  padding: 10px 10px 10px 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+  color: white;
 }
-form button {
-    background-color: #007bff;
-    color: #fff;
-    margin-top: 15px;
-    transition: background-color 0.3s ease;
-}
-form button:hover {
-    background-color: #0056b3;
+.input-group input::placeholder {
+  color: #aaa;
 }
 
+.input-pair {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.input-pair input,
+.input-pair select {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+  border: none;
+  color: white;
+}
+.input-pair select option {
+  background-color: white;
+  color: black;
+}
+
+.terms {
+  font-size: 12px;
+  margin: 10px 0;
+  display: block;
+  color: #ddd;
+}
+
+.apply-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #ffc107;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.apply-btn i {
+  margin-left: 8px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-    .left-section, .form-section {
-        flex: unset;
-        width: 100%;
-    }
-    .left-section {
-        padding: 20px;
-    }
+  .container {
+    flex-direction: column;
+  }
+  .left, .right {
+    flex: none;
+    width: 100%;
+  }
+  .left {
+    padding: 20px;
+  }
 }
 ```
 ## Output:
-![image](https://github.com/user-attachments/assets/1d7d62da-1811-4734-ab6d-9dfebc4d244c)
+![image](https://github.com/user-attachments/assets/ea0f9770-b2fd-4edb-b35d-c18b93f036ac)
 
 ## Result:
 A landing page clone of Saveetha Engineering College’s Admission Enquiry form using HTML and CSS is designed successfully.
